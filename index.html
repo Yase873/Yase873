@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Yasenis</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #c49b63;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover {
+            color: yellow;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 10px;
+        }
+        main {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        article {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        article:hover {
+            transform: scale(1.05);
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #c49b63;
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"], input[type="email"], textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+        input[type="submit"] {
+            background-color: #c49b63;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #a07c4a;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+    
+    <header>
+        <h1>Hoja de Vida -  YASENIS</h1>
+        <nav>
+            <a href="#perfil">Perfil</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+    
+    <main id="main-content">
+        <section id="perfil">
+            <h2>Perfil</h2>
+            <p>Hola, soy <strong>Yasenis</strong>, desarrollador(a) web con experiencia en HTML y CSS. Disfruto creando sitios accesibles y usables.</p>
+        </section>
+        
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <article>
+                <img src="https://images.unsplash.com/photo-1690214141978-3a038a437dec?fm=jpg&q=60&w=300&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2F0aXRvJTIwZW4lMjBsYSUyMGNhbWF8ZW58MHx8MHx8fDA%3D" alt="Un gato acostado">
+                <h3>CatPhotoApp</h3>
+                <p><strong>Descripción:</strong> Proyecto para practicar HTML básico y etiquetado semántico.</p>
+                <table>
+                    <tr>
+                        <th scope="col">Tecnología</th>
+                        <th scope="col">Uso</th>
+                    </tr>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Estructura del sitio</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>Estilos básicos</td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <img src="img/cafe.JPG" alt="CSS Café">
+                <h3>CSS Café</h3>
+                <p><strong>Descripción:</strong> Maquetación y estilos de un menú tipo café.</p>
+                <table>
+                    <caption>Tabla de tecnologías usadas en el proyecto</caption>
+                    <tr>
+                        <th scope="col">Tecnología</th>
+                        <th scope="col">Uso</th>
+                    </tr>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Estructura</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>Maquetación y responsive</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>Estilos básicos</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre"><strong>Nombre:</strong></label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="mensaje"><strong>Mensaje:</strong></label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 YASENIS. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
